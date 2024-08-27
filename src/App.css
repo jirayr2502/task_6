@@ -1,0 +1,35 @@
+#root {
+  gap: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+.toDo {
+  font-size: xx-large;
+}
+
+.completed {
+  text-decoration: line-through;
+  background-color: greenyellow;
+}
+
+.tablelist {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.tablelist td,
+.tablelist th {
+  padding: 8px;
+  text-align: center;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
