@@ -1,4 +1,8 @@
-export const ToDoItem = ({ handle, deleteItem, list: { id, text, completed } }) => {
+import { useContext } from "react"
+import { DataContext } from "../Data"
+
+export const ToDoItem = ({ id, text, completed }) => {
+    const { onComplete, onDelete } = useContext(DataContext)
     return (
         <>
 
@@ -7,10 +11,10 @@ export const ToDoItem = ({ handle, deleteItem, list: { id, text, completed } }) 
                     {text}
                 </td>
                 <td>
-                    <button onClick={() => handle(id)}>{completed ? 'Cancel' : 'Complete'}</button>
+                    <button onClick={() => onComplete(id)}>{completed ? 'Cancel' : 'Complete'}</button>
                 </td>
                 <td>
-                    <button onClick={() => deleteItem(id)}>Delete</button>
+                    <button onClick={() => onDelete(id)}>Delete</button>
                 </td>
             </tr>
 

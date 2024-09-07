@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { DataContext } from "../Data"
 
-export const AddToDo = ({ onText }) => {
-
+export const AddToDo = () => {
+    const { onAddText } = useContext(DataContext)
     const [inpText, setInpText] = useState({
         text: ''
     })
@@ -13,7 +14,8 @@ export const AddToDo = ({ onText }) => {
             return setError("please enter your text");
         }
         setError("");
-        onText(inpText.text);
+        onAddText(inpText.text);
+        
     };
 
 
