@@ -12,7 +12,6 @@ export const FilteredToDo = () => {
             {
                 list.map((criteria, index) => <button 
                     key={index}
-                
                     onClick={() => onFiltered(criteria)}
                 >
                     {criteria}
